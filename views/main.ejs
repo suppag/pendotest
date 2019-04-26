@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="is-preload">
+    <h1 id="userID" style="display:none"><%= session.user_id %></h1>
+    <h1 id="userEmail" style="display:none"><%= session.user_email %></h1>
+
+    <!-- Header -->
+    <div id="header">
+      <div class="top">
+        <!-- Logo -->
+        <div id="logo">
+          <span class="image avatar48"
+            ><img src="/images/islandPalm.jpeg" alt=""
+          /></span>
+          <h1 id="title">North Sentinel Island</h1>
+          <p>Your Next Vacation</p>
+          <p>June 1, 2019 - June 14, 2019</p>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#top" id="top-link"
+                ><span class="icon fa-home">Intro</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio" id="portfolio-link"
+                ><span class="icon fa-th">The Island</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" id="about-link"
+                ><span class="icon fa-user">About Us</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" id="contact-link"
+                ><span class="icon fa-envelope">Contact</span></a
+              >
+            </li>
+            <li>
+              <a href="/logout" id="contact-link"
+                ><span class="fas fa-sign-out-alt">Logout</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bottom">
+        <!-- Social Icons -->
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon fa-facebook"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Intro -->
+      <section id="top" class="one dark cover">
+        <div class="container">
+          <header>
+            <h2 class="alt">
+              Welcome <strong><%= session.user_fname %></strong>!<br />
+              This is a site demo for Pendo <a href="https://www.pendo.io/">pendo.io</a>.
+            </h2>
+            <p>
+              Take a look at what Pendo can do for your<br />
+              company and how we can help you make the most of your website.
+            </p>
+          </header>
+
+          <footer>
+            <a href="https://www.pendo.io/customers/" class="button scrolly">Check It Out</a>
+          </footer>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="two">
+        <div class="container">
+          <header>
+            <h2>North Sentinel Island</h2>
+          </header>
+
+          <p>
+            North Sentinel Island is home to one of the last undiluted
+            hunter-and-gatherer societies, a rugged, Manhattan-sized island
+            where a few dozen people live trapped in time and in total
+            isolation. For decades, India has kept North Sentinel in a museum
+            case.
+          </p>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/relaxAvatar.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Relax</h3>
+                </header>
+              </article>
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/kayak.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Explore</h3>
+                </header>
+              </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/hotel.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Sleep</h3>
+                </header>
+              </article>
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/swim.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Swim</h3>
+                </header>
+              </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/girlOnBoat.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Tours</h3>
+                </header>
+              </article>
+              <article class="item">
+                <a href="#" class="image fit"
+                  ><img src="/images/relax.jpeg" alt=""
+                /></a>
+                <header>
+                  <h3>Unwind</h3>
+                </header>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section id="about" class="three">
+        <div class="container">
+          <header>
+            <h2>About Pendo Travel</h2>
+          </header>
+
+          <a href="#" class="image featured"
+            ><img src="/images/travelPrep.jpeg" alt=""
+          /></a>
+
+          <p>
+            Started in 2019 by two friends looking to enjoy life. After
+            discovering the struggles of seeing the world with limited money and
+            resources. We wanted to create a way to make seeing the world as
+            pain free as possible.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="four">
+        <div class="container">
+          <header>
+            <h2>Contact</h2>
+          </header>
+
+          <p>
+            We try to do our best to curate the best vacations for you! No need
+            to plan anything. If you have any questions, feel free to reach out!
+          </p>
+
+          <form method="post" action="#">
+            <div class="row">
+              <div class="col-6 col-12-mobile">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="col-6 col-12-mobile">
+                <input type="text" name="email" placeholder="Email" />
+              </div>
+              <div class="col-12">
+                <textarea name="message" placeholder="Message"></textarea>
+              </div>
+              <div class="col-12">
+                <input type="submit" value="Send Message" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      <!-- Copyright -->
+      <ul class="copyright">
+        <li>&copy; Pendo Test. All rights reserved.</li>
+        <li>Design: Essie Hammadani</li>
+      </ul>
+    </div>
+
+    <!-- Pendo -->
+    <script>
+      (function(apiKey) {
+        (function(p, e, n, d, o) {
+          var v, w, x, y, z;
+          o = p[d] = p[d] || {};
+          o._q = [];
+          v = ["initialize", "identify", "updateOptions", "pageLoad"];
+          for (w = 0, x = v.length; w < x; ++w)
+            (function(m) {
+              o[m] =
+                o[m] ||
+                function() {
+                  o._q[m === v[0] ? "unshift" : "push"](
+                    [m].concat([].slice.call(arguments, 0))
+                  );
+                };
+            })(v[w]);
+          y = e.createElement(n);
+          y.async = !0;
+          y.src = "https://cdn.pendo.io/agent/static/" + apiKey + "/pendo.js";
+          z = e.getElementsByTagName(n)[0];
+          z.parentNode.insertBefore(y, z);
+        })(window, document, "script", "pendo");
+
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+        let uID = document.getElementById("userID").innerText;
+        console.log("$$$$$$ user id  $$$$$$$$$$", uID);
+
+        let uEmail = document.getElementById("userEmail").innerText;
+        console.log("$$$$$$ user email  $$$$$$$$$$", uEmail);
+
+        // LOCAL STORAGE
+        function displayLocalStorageData() {
+          let output =
+            "LOCALSTORAGE DATA:\n------------------------------------\n";
+          if (localStorage) {
+            if (localStorage.length) {
+              for (var i = 0; i < localStorage.length; i++) {
+                output +=
+                  localStorage.key(i) +
+                  ": " +
+                  localStorage.getItem(localStorage.key(i)) +
+                  "\n";
+              }
+            } else {
+              output += "There is no data stored for this domain.";
+            }
+          } else {
+            output += "Your browser does not support local storage.";
+          }
+          console.log(output);
+        }
+        localStorage.setItem("UserEmail", uEmail);
+        displayLocalStorageData();
+
+        pendo.initialize({
+          visitor: {
+            id: uID, // Required if user is logged in
+            email: uEmail // Optional
+            // role:         // Optional
+
+            // You can add any additional visitor level key-values here,
+            // as long as it's not one of the above reserved names.
+          },
+
+          account: {
+            id: "TESTTTTTTSSSS", // Highly recommended
+            name: "here"
+            // planLevel:    // Optional
+            // planPrice:    // Optional
+            // creationDate: // Optional
+
+            // You can add any additional account level key-values here,
+            // as long as it's not one of the above reserved names.
+          }
+        });
+      })("5c1e641a-3301-41c0-4712-1772e9fa9fb9");
+    </script>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

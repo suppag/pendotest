@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="static/css/index.css" />
+
+  <title>Pendo Demo</title>
+</head>
+<div class="container">
+
+  <body>
+    <h1 class="welcomeHeader">Welcome</h1>
+
+    <h3>Register</h3>
+    <% if(messages.registration) { %> <% for (var x of messages.registration) {
+    %>
+    <h3><%= x %></h3>
+    <% } %> <% } %>
+    <form action="/register" method="post">
+      <p>Email: <input type="text" name="email" /></p>
+      <p>First Name: <input type="text" name="first_name" /></p>
+      <p>Last Name: <input type="text" name="last_name" /></p>
+      <p>Password: <input type="text" name="password" /></p>
+      <p>Confirm Password: <input type="text" name="c_password" /></p>
+      <input type="submit" value="REGISTER" />
+    </form>
+    <hr />
+    <h3>Login</h3>
+    <form action="/login" method="post">
+      <p>Email: <input type="text" name="email" /></p>
+      <p>Password: <input type="text" name="password" /></p>
+      <input type="submit" value="LOGIN" />
+    </form>
+</div>
+<script>
+  (function (apiKey) {
+    (function (p, e, n, d, o) {
+      var v, w, x, y, z;
+      o = p[d] = p[d] || {};
+      o._q = [];
+      v = ["initialize", "identify", "updateOptions", "pageLoad"];
+      for (w = 0, x = v.length; w < x; ++w)
+        (function (m) {
+          o[m] =
+            o[m] ||
+            function () {
+              o._q[m === v[0] ? "unshift" : "push"](
+                [m].concat([].slice.call(arguments, 0))
+              );
+            };
+        })(v[w]);
+      y = e.createElement(n);
+      y.async = !0;
+      y.src = "https://cdn.pendo.io/agent/static/" + apiKey + "/pendo.js";
+      z = e.getElementsByTagName(n)[0];
+      z.parentNode.insertBefore(y, z);
+    })(window, document, "script", "pendo");
+
+    pendo.initialize({
+      visitor: {
+        id: "test", // Required if user is logged in
+        // email: uEmail // Optional
+        // role:         // Optional
+
+        // You can add any additional visitor level key-values here,
+        // as long as it's not one of the above reserved names.
+      },
+
+      account: {
+        id: "TESTTTTTTSSSS" // Highly recommended
+        // name:         // Optional
+        // planLevel:    // Optional
+        // planPrice:    // Optional
+        // creationDate: // Optional
+
+        // You can add any additional account level key-values here,
+        // as long as it's not one of the above reserved names.
+      }
+    });
+  })("5c1e641a-3301-41c0-4712-1772e9fa9fb9");
+</script>
+
+</body>
+
+</html>
